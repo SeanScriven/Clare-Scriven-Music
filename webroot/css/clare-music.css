@@ -3,61 +3,640 @@
     margin: 0px;
 }
 
-.header-nav ul {
-    padding: 0px;
-    list-style-type: none;
+.mobile-header {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    border-bottom: 1px solid black;
+    background-image: url('../img/brick wall.jpg');
 }
 
-@media (max-width: 576px) {
-    .header {
+.mobile-header-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    padding: 5px 10px;
+}
+
+.mobile-heading-container {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.mobile-menu-dropdown {
+    display: flex;
+    flex-grow: 0;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.mobile-list-button {
+    border: white solid 1px;
+    height: 40px;
+}
+
+.mobile-list-button:focus {
+    border: white solid 1px !important;
+}
+
+.mobile-list-button:hover {
+    border: white solid 1px !important;
+}
+
+.mobile-list-icon {
+    font-size: 1.8rem;
+    color: white;
+}
+
+#mobile-nav {
+    position: absolute;
+    top: 125px;
+    right: 30px;
+    width: 180px;
+    background-image: url('../img/brick wall.jpg');
+    z-index: 1000;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.hide-mobile-list {
+    display: none;
+}
+
+.show-mobile-list {
+    display: flex;
+}
+
+.header-nav > ul > li {
+    font-family: 'Indie Flower';
+    font-size: 1.2rem;
+    padding: 2px 10px;
+}
+
+.header-nav ul {
+    width: 100%;
+    padding: 0px;
+    list-style-type: none;
+    margin-bottom: 0px;
+}
+
+.header-nav ul a {
+    display: flex;
+    color: #fff;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #f09,
+            0 0 82px #f09,
+            0 0 92px #f09,
+            0 0 102px #f09,
+            0 0 151px #f09;
+    text-decoration: none;
+    width: 100%;
+}
+
+.main-header {
+    display: none;
+}
+
+.heading {
+    transform: rotate(-10deg);
+    max-width: 80%;
+    margin-left: 15px;
+    font-size: 4rem;
+    color: #fff;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #f09,
+            0 0 82px #f09,
+            0 0 92px #f09,
+            0 0 102px #f09,
+            0 0 151px #f09;
+}
+
+.section  {
+    margin: 0px;
+    padding: 10px 0px 20px 0px;
+}
+
+.inside-section {
+    width: 100%;
+}
+
+#section-home {
+    display: flex;
+    justify-content: center;
+    background-color: #fcb5e1;
+}
+
+#section-home > .inside-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.section h1 {
+    font-family: 'Indie Flower';
+    font-size: 2.5rem;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.image-container {
+    display: none;
+}
+
+.content-popup {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border: 2px solid #a3c2f5;
+    background-color: #a3c2f5;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px grey;
+}
+
+.content-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+.close-button {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-left: 1px solid grey;
+}
+
+.content-window {
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.home-content {
+    font-family: 'Pacifico';
+    font-size: 1.25rem;
+}
+
+.content-window p {
+    color: #36454F;
+}
+
+.audio-bubble {
+    width: 90%;
+    border: 5px solid #ffd9a6;
+    background-color: #fdfabf;
+    border-radius: 15px;
+    box-shadow: 7px 5px 5px grey;
+}
+
+.audio-group {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 5px;
+}
+
+.audio-buttons {
+    display: flex;
+    flex: 1;
+}
+
+.audio-name {
+    display: flex;
+    flex: 3;
+    font-family: 'Amatic SC';
+    font-size: 1.25rem;
+}
+
+.pause-button {
+    display: none;
+}
+
+.audio-duration {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.list-button {
+    border: black solid 1px;
+    height: 40px;
+}
+
+.list-button:focus {
+    border: black solid 1px !important;
+}
+
+.list-button:hover {
+    border: black solid 1px !important;
+}
+
+.list-icon {
+    font-size: 1.8rem;
+}
+
+.bio-section {
+    display: flex;
+    justify-content: center;
+    background-color: #d7b4f5;
+}
+
+.bio-section > .inside-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d7b4f5;
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bio-child-container {
+    display: flex;
+    justify-content: center;
+}
+
+.bio-image-container {
+    display: none;
+}
+
+.bio-image-roll-container {
+    display: none;
+}
+
+.bio-content {
+    font-family: 'Alfa Slab One';
+    font-size: 1.1rem;
+}
+
+.music-section {
+    display: flex;
+    justify-content: center;
+    background-color: #fcb5e1;
+}
+
+.music-section > .inside-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.audio-section .audio-group:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+.video-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    width: 90%;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.video-frame {
+    height: 225px;
+}
+
+.footer  {
+    margin-bottom: 0px;
+    background-image: url('../img/brick wall.jpg');
+}
+
+.contact-header {
+    text-align: center;
+    margin: 10px 0px 20px 0px;
+    color: white;
+    font-family: 'Indie Flower';
+    font-size: 2.5rem;
+}
+
+.contact-nav ul {
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.contact-nav i {
+    font-size: 24px;
+    color: white;
+}
+
+.contact-nav i:hover {
+    color: #9b5de5;
+}
+
+@media only screen and (min-width: 445px) {
+    .mobile-heading-container {
+        justify-content: center;
+    }
+
+    .heading {
+        margin-left: 40px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .mobile-header {
         display: none;
     }
 
-    .mobile-header {
+    .main-header {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        border-bottom: 1px solid black;
+        flex-wrap: nowrap;
+        justify-content: center;
+        height: 180px;
+        background-image: url('../img/brick wall.jpg');
     }
 
-    .mobile-header-container {
+    .main-heading-container {
         display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
-
-    .menu-dropdown {
-        display: flex;
-        flex-grow: 0.5;
+        flex: 1;
+        justify-content: center;
         align-items: center;
     }
 
-    .heading-container {
+    .heading {
+        transform: rotate(0deg);
+    }
+
+    .main-nav {
         display: flex;
-        flex-grow: 0.5;
-        justify-content: flex-start;
+        justify-content: center;
     }
 
-    .list-button {
+    .main-nav ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .main-nav ul li {
+        margin: 0 10px;
+        font-family: 'Indie Flower';
+        font-size: 1.5rem;
+    }
+
+    .main-nav ul a {
+        color: #fff;
+        text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px #f09,
+                0 0 82px #f09,
+                0 0 92px #f09,
+                0 0 102px #f09,
+                0 0 151px #f09;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    .audio-duration {
+        justify-content: center;
+    }
+
+    .video-container {
+        width: 80%;
+    }
+
+    .video-frame {
+        height: 250px;
+    }
+
+    .contact-nav ul {
+        justify-content: center;
+
+        li {
+            padding: 0px 50px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .home-container {
+        flex-direction: row;
+    }
+
+    .image-container {
+        display: flex;
+    }
+
+    .image-container img {
+        max-height: 250px;
+        height: auto;
+        width: auto;
+    }
+
+    .bio-section {
+        padding-bottom: 50px;
+    }
+
+    .bio-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .bio-image-container {
+        display: flex;
+        position: relative;
+    }
+
+    .bio-child-container {
+        flex: 1 1 calc(50% - 20px);
+        box-sizing: border-box;
+    }
+
+    .bio-child-first-container {
+        flex: 1 1 100%;
+    }
+
+    .bio-image-box {
+        background-color: #ffd9a6;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border: 10px solid #ffd9a6;
+        height: fit-content;
+    }
+
+    .bio-image-box img {
+        max-height: 250px;
+        height: auto;
+        width: auto;
+    }
+
+    .bio-image-box:after {
+        content: '';
+        display: block;
+        padding-bottom: 60px;
+        background-color: #ffd9a6;
+    }
+
+
+    .hovered-image-box {
         position: absolute;
-        left: 5%;
-        border: black solid 1px;
+        top: 150px;
+        right: -5%;
     }
 
-    #mobile-nav {
-        display: none;
-        margin-left: 30px;
+    .video-frame {
+        height: 300px;
+    }
+
+}
+
+@media only screen and (min-width: 831px) {
+    .bio-section {
+        padding-bottom: 100px;
+    }
+
+    .hovered-image-box {
+        top: 120px;
+        right: -5%;
     }
 }
 
-@media (min-width: 577px) {
-    .header {
+@media only screen and (min-width: 992px) {
+    .bio-section {
+        padding-bottom: 130px;
+    }
+
+    .bio-child-first-container {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .bio-image-roll-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bio-image-box-taller img {
+        max-height: 350px;
+    }
+
+    .bio-camera-roll {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+    }
+
+    .bio-camera-roll img {
+        max-height: 180px;
+        max-width: 100px;
+        height: auto;
+        width: auto;
+    }
+
+    .hovered-image-box {
+        top: 110px;
+        right: 2%;
+    }
+
+    .video-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .video-container {
+        flex: 1 1 calc(50% - 20px);
+        box-sizing: border-box;
+    }
+
+    .video-section > .video-container:nth-last-child(1):nth-child(odd) {
+        flex: 1 1 100%;
+        max-width: calc(50% - 20px);
+    }
+
+    .footer {
         width: 100%;
-        text-align: center;
     }
-    .mobile-header {
-        display: none;
+
+    .contact-nav ul li {
+        padding: 0px 60px;
     }
 
 }
 
+@media only screen and (min-width: 1100px) {
+    .bio-section {
+        padding-bottom: 150px;
+    }
+
+    .hovered-image-box {
+        top: 100px;
+        right: 10%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .inside-section {
+        width: 80%;
+    }
+
+    .bio-section {
+        padding-bottom: 170px;
+    }
+
+    .hovered-image-box {
+        top: 140px;
+        right: 5%;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    .contact-nav ul {
+        padding: 0px 60px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .hovered-image-box {
+        top: 130px;
+        right: 10%;
+    }
+}
